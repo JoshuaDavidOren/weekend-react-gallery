@@ -26,6 +26,18 @@ function App() {
   }
 console.log(pictureList);
 
+function like(id) {
+    console.log('ooooh a like', id);
+    axios.put(`/gallery/like/${id}`)
+    .then(response => {
+        console.log('OK but why do you like it?');
+        GetPictures();
+    })
+    .catch(err => {
+        console.log('its a simple put',err);
+    })
+}
+
 
 
     return (
@@ -34,7 +46,7 @@ console.log(pictureList);
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <GalleryList pictureList={pictureList}/>
+        <GalleryList pictureList={pictureList} like={like}/>
         <img src="images/goat_small.jpg"/>
       </div>
     );

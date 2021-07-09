@@ -1,11 +1,12 @@
 import GalleryListItem from "./GalleryListItem";
 
-function GalleryList ({pictureList}) {
+function GalleryList ({pictureList, like}) {
  
     let listGalleryPictures = pictureList.map((thing) => {
         return (
             <GalleryListItem
-                thing={thing}/>
+                thing={thing}
+                like={like}/>
         )
     })
     return(
