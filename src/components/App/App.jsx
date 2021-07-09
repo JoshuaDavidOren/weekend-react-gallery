@@ -10,12 +10,12 @@ function App() {
   
   //calls components on load
   useEffect(() => {
-    getPictures()
+    GetPictures()
   }, [])
 
   let [pictureList, setPictureList] = useState([]);
 
-  const getPictures = () => {
+  const GetPictures = () => {
     axios.get('/gallery')
       .then(response => {
         setPictureList(response.data)
@@ -40,4 +40,4 @@ console.log(pictureList);
     );
 }
 
-export default App;
+export default App; 

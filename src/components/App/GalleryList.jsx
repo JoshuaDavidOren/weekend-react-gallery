@@ -9,7 +9,19 @@ function GalleryList ({pictureList}) {
         )
     })
     return(
-    // console.log({pictureList});
+   
+ 
+    <div id='dad'>
+        {listGalleryPictures}
+    </div>
+)
+}
+
+export default GalleryList;
+
+
+  // checked to make sure props were propping
+        // console.log({pictureList});
     
 //     <>
 //     <h1>pics</h1>
@@ -23,10 +35,3 @@ function GalleryList ({pictureList}) {
 //         ))}
 //     </tbody>
 //     </>
-    <div>
-        {listGalleryPictures}
-    </div>
-)
-}
-
-export default GalleryList;
