@@ -11,17 +11,21 @@ function GalleryList ({pictureList}) {
     return(
     // console.log({pictureList});
     
-    <>
-    <h1>pics</h1>
-    <tbody>
-        {pictureList.map((thing) => (
-            <tr key={thing.id}>
-<td>{thing.description}</td>
-                <img src={thing.path}/>
-            </tr>
-        ))}
-    </tbody>
-    </>
+//     <>
+//     <h1>pics</h1>
+//     <tbody>
+//         {pictureList.map((thing) => (
+//             <tr key={thing.id}>
+// <td>{thing.description}</td>
+//                 <img src={thing.path}/>
+//             </tr>
+            
+//         ))}
+//     </tbody>
+//     </>
+    <div>
+        {listGalleryPictures}
+    </div>
 )
 }
 
