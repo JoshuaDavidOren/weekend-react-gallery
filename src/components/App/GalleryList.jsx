@@ -1,14 +1,23 @@
+import GalleryListItem from "./GalleryListItem";
+
 function GalleryList ({pictureList}) {
-return(
+ 
+    let listGalleryPictures = pictureList.map((thing) => {
+        return (
+            <GalleryListItem
+                thing={thing}/>
+        )
+    })
+    return(
     // console.log({pictureList});
     
     <>
     <h1>pics</h1>
     <tbody>
-        {pictureList.map((path) => (
-            <tr key={path.id}>
-<td>{path.description}</td>
-                <img src={path.path}/>
+        {pictureList.map((thing) => (
+            <tr key={thing.id}>
+<td>{thing.description}</td>
+                <img src={thing.path}/>
             </tr>
         ))}
     </tbody>
