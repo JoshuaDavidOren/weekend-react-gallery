@@ -1,14 +1,19 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import GalleryList from './GalleryList';
 import './App.css';
 
+
 function App() {
-  let [pictureList, setPictureList] = useState([]);
+  // sets GET call into use state
   
+  
+  //calls components on load
   useEffect(() => {
     getPictures()
   }, [])
+
+  let [pictureList, setPictureList] = useState([]);
 
   const getPictures = () => {
     axios.get('/gallery')
@@ -29,6 +34,7 @@ console.log(pictureList);
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
+        <GalleryList pictureList={pictureList}/>
         <img src="images/goat_small.jpg"/>
       </div>
     );
