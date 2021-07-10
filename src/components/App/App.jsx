@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import GalleryList from './GalleryList';
 import './App.css';
+import Header from './Header.jsx';
 
 
 function App() {
@@ -42,12 +43,8 @@ function like(id) {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
-        <p>Gallery goes here</p>
+        <Header/>
         <GalleryList pictureList={pictureList} like={like}/>
-        <img src="images/goat_small.jpg"/>
       </div>
     );
 }

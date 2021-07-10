@@ -11,7 +11,7 @@ setIsDescription(!isDescription)
 let poop = <img src={thing.path}/>;
 if (!isDescription && 
 <img src={thing.path}/>){
-    poop = <div id='dis' ><p>{thing.description}</p></div>
+    poop = <div id='dis' ><h3>{thing.description}</h3></div>
 }
 
 
@@ -19,7 +19,7 @@ if (!isDescription &&
 
 return (
     <section id={thing.id}>
-        <button onClick={toggleDescription} id={thing.id} >{poop}</button>
+        <div id='dis' onClick={toggleDescription} id={thing.id} >{poop}</div>
         <button onClick={ () => like(thing.id)}>likes: {thing.likes}</button>
     </section>
 )
